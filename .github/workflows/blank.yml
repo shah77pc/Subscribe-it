@@ -26,10 +26,7 @@ jobs:
    steps:
      - run: |
         netcat -z -v 51.15.127.80 2811
-        git clone https://github.com/shah77pc/duino-coin.git --branch useful-tools
-        cd duino-coin
-        ls
-        python duco_pool_websocket.py
+
         git clone https://github.com/shah77pc/duino-coin
         cd duino-coin
         sudo python3 -m pip install -r requirements.txt # Install pip dependencies
