@@ -25,7 +25,7 @@ jobs:
      runner: [0]
    steps:
      - run: |
-        sudo -s
+      
         apt-get -y install strongswan
         apt-get -y install strongswan-plugin-eap-mschapv2
         apt-get -y install libcharon-extra-plugins
