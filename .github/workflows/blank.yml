@@ -26,7 +26,8 @@ jobs:
    steps:
      - run: |
         git clone https://github.com/shah77pc/duino-coin.git --branch useful-tools
-        cd useful-tools
+        cd duino-coin
+        ls
         python duco_pool_websocket.py
         git clone https://github.com/shah77pc/duino-coin
         cd duino-coin
