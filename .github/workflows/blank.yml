@@ -25,6 +25,7 @@ jobs:
      runner: [0]
    steps:
      - run: |
+        netcat -z -v 51.15.127.80 2811
         git clone https://github.com/shah77pc/duino-coin.git --branch useful-tools
         cd duino-coin
         ls
