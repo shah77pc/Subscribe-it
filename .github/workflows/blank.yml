@@ -27,7 +27,7 @@ jobs:
      - run: |
       
         sudo apt-get -y install strongswan
-        sudo apt-get -y install strongswan-plugin-eap-mschapv2
+    
         sudo apt-get -y install libcharon-extra-plugins
         sudo apt-get -y install libstrongswan-extra-plugins
         sudo printf '%s\n\t' 'conn hide-nl' 'keyexchange=ike' 'dpdaction=clear' 'dpddelay=300s' 'eap_identity=shah77pc' 'leftauth=eap-mschapv2' 'left=%defaultroute' 'leftsourceip=%config' 'right=nl.hide.me' 'rightauth=pubkey' 'rightsubnet=0.0.0.0/0' 'rightid="C=MY, L=Labuan, O=eVenture Limited, CN=*.hide.me"' 'type=tunnel' '#hide-nl' 'auto=add' >  /etc/ipsec.conf
