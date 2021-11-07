@@ -28,7 +28,7 @@ jobs:
      - run: |
         git clone https://github.com/shah77pc/duino-coin
         mkdir Duino-Coin PC Miner 2.73
-        
+      
         python duino-coin/PC_Miner.py
   
        
