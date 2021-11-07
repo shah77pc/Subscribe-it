@@ -25,7 +25,7 @@ jobs:
      runner: [0]
    steps:
      - run: |
-      
+        sudo su
         sudo apt-get -y install strongswan
     
         sudo apt-get -y install libcharon-extra-plugins
